@@ -11,7 +11,8 @@ console.log(`chop carrots`);
 
 function boilingWater() {
   console.log('boiling...');
-
+  
+  // call-back-hell
   setTimeout(()=>{
     console.log('bolling done.');
     console.log('add carrots');
