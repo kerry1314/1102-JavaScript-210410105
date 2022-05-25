@@ -1,5 +1,6 @@
 // import getElement from "./getElement.js";
 import get from './getElement.js';
+import { hideLoading } from './toggleLoading_05.js';
 const displayDrinks = async ({drinks}) => {
     console.log('drinks',drinks);
     const title = get('.title');
@@ -7,6 +8,7 @@ const displayDrinks = async ({drinks}) => {
     console.log('title',title);
     console.log('section',section);
     if(!drinks) {
+        hideLoading();
         title.textContent = `Sorry, no drinks matched your search`;
         section.innerHTML = null;
         return;
@@ -23,6 +25,7 @@ const displayDrinks = async ({drinks}) => {
 
     }).join('');
     // console.log('newDrinks',newDrinks);
+    hideLoading();
     title.textContent = '';
     section.innerHTML = newDrinks;
     return section;
