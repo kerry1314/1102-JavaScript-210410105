@@ -15,6 +15,5 @@ form.addEventListener('keyup',(e)=>{
     console.log('input',input.value);
     const value = input.value;
     if(!value) return;
-        presentDrinks(`${baseURL}${value}`);
-    
+        presentDrinks(`${baseURL}${value}`); 
 });
